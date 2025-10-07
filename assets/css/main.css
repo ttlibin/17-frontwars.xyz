@@ -92,7 +92,24 @@ h3 {
     height: 70px;
 }
 
-.nav-logo h1 {
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.nav-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-logo-text h1 {
     font-size: 1.8rem;
     color: var(--accent-gold);
     margin: 0;
@@ -863,6 +880,20 @@ section {
     .nav-toggle {
         display: flex;
     }
+    
+    .nav-logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .nav-logo-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-subtitle {
+        font-size: 0.6rem;
+    }
+}
     
     .hero-title {
         font-size: 2.5rem;
