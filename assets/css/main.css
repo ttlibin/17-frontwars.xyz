@@ -1,0 +1,903 @@
+/* FrontWars - Military Strategy Theme CSS */
+
+/* CSS Variables for Military Theme */
+:root {
+    /* Military Color Palette */
+    --primary-green: #2D5016;
+    --dark-green: #1A3A0A;
+    --secondary-gray: #1A1A1A;
+    --dark-gray: #0F0F0F;
+    --accent-gold: #D4AF37;
+    --accent-red: #8B0000;
+    --accent-orange: #FF6B35;
+    --text-white: #FFFFFF;
+    --text-light: #E0E0E0;
+    --text-muted: #B0B0B0;
+    
+    /* Military Typography */
+    --font-primary: 'Orbitron', monospace;
+    --font-secondary: 'Rajdhani', sans-serif;
+    
+    /* Spacing */
+    --section-padding: 80px 0;
+    --container-padding: 0 20px;
+    --border-radius: 4px;
+    
+    /* Shadows */
+    --shadow-military: 0 4px 20px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-secondary);
+    background: var(--secondary-gray);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: var(--text-white);
+}
+
+/* Military Navigation */
+.military-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    border-bottom: 3px solid var(--accent-gold);
+    z-index: 1000;
+    box-shadow: var(--shadow-military);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo h1 {
+    font-size: 1.8rem;
+    color: var(--accent-gold);
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.nav-subtitle {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    display: block;
+    margin-top: -5px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    box-shadow: var(--shadow-glow);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--accent-gold);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--dark-gray), var(--secondary-gray));
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.tactical-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(212, 175, 55, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212, 175, 55, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.military-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    from { text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.3); }
+    to { text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.6); }
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--accent-gold);
+    font-family: var(--font-primary);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Military Buttons */
+.btn {
+    padding: 15px 30px;
+    border: 2px solid;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-primary);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--accent-gold), var(--accent-orange));
+    border-color: var(--accent-gold);
+    color: var(--dark-gray);
+    box-shadow: var(--shadow-military);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+    background: transparent;
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-gold);
+    color: var(--dark-gray);
+    transform: translateY(-2px);
+}
+
+/* Section Styles */
+section {
+    padding: var(--section-padding);
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    margin-bottom: 20px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Game Section */
+.game-section {
+    background: var(--dark-gray);
+    border-top: 3px solid var(--accent-gold);
+    border-bottom: 3px solid var(--accent-gold);
+    padding: 20px 0;
+    position: relative;
+    overflow: visible;
+    min-height: 120px;
+}
+
+.game-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(45, 80, 22, 0.1), rgba(26, 26, 26, 0.1));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.game-section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: pulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px var(--container-padding) var(--container-padding);
+    overflow: visible;
+}
+
+/* Game Title Section - Simplified */
+
+.game-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    line-height: 1.4;
+}
+
+.game-section .section-header p {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: visible;
+}
+
+.game-frame {
+    background: url('../images/frontwars.png') center center / cover no-repeat !important;
+    border: 3px solid var(--accent-gold);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-military);
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+    min-height: 500px;
+    width: 100%;
+    opacity: 0.6;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.game-frame::before {
+    display: none;
+}
+
+.game-frame::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* Play Overlay Styles */
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.play-content {
+    text-align: center;
+    color: var(--text-white);
+}
+
+.play-content h2 {
+    font-size: 3rem;
+    color: var(--accent-gold);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    font-family: var(--font-primary);
+}
+
+.play-content p {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.play-button {
+    background: linear-gradient(45deg, var(--accent-gold), var(--accent-orange));
+    border: 2px solid var(--accent-gold);
+    color: var(--dark-gray);
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-military);
+    font-family: var(--font-primary);
+}
+
+.play-button:hover {
+    background: linear-gradient(45deg, var(--accent-orange), var(--accent-gold));
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Fullscreen Controls */
+.fullscreen-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.fullscreen-button {
+    background: var(--dark-gray);
+    border: 2px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fullscreen-button:hover {
+    background: var(--accent-gold);
+    color: var(--dark-gray);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.fullscreen-icon {
+    font-size: 1.2rem;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background: var(--secondary-gray);
+    border: 2px solid var(--primary-green);
+    border-radius: var(--border-radius);
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+
+.game-info h3 {
+    color: var(--accent-gold);
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.game-info .fullscreen-controls {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.status-indicators {
+    display: flex;
+    gap: 30px;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    animation: statusBlink 2s infinite;
+}
+
+@keyframes statusBlink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+}
+
+/* Features Section */
+.features-section {
+    background: var(--secondary-gray);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+.feature-card {
+    background: var(--dark-gray);
+    border: 2px solid var(--primary-green);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.feature-card:hover::before {
+    left: 100%;
+}
+
+.feature-card:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.feature-card h3 {
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Guide Section */
+.guide-section {
+    background: var(--dark-gray);
+}
+
+.guide-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+.guide-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: var(--secondary-gray);
+    border: 2px solid var(--primary-green);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.step-item:hover {
+    border-color: var(--accent-gold);
+    box-shadow: var(--shadow-glow);
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--accent-gold);
+    font-family: var(--font-primary);
+    min-width: 80px;
+    text-align: center;
+}
+
+.step-content h3 {
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.step-content p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Controls Section */
+.controls-section {
+    background: var(--secondary-gray);
+}
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+.control-category {
+    background: var(--dark-gray);
+    border: 2px solid var(--primary-green);
+    border-radius: var(--border-radius);
+    padding: 30px;
+}
+
+.control-category h3 {
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.control-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.control-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--primary-green);
+}
+
+.key {
+    background: var(--accent-gold);
+    color: var(--dark-gray);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+}
+
+.action {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Community Section */
+.community-section {
+    background: var(--dark-gray);
+    border-top: 3px solid var(--accent-gold);
+}
+
+.community-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--secondary-gray);
+    border: 2px solid var(--primary-green);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-glow);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--accent-gold);
+    font-family: var(--font-primary);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+.military-footer {
+    background: var(--dark-gray);
+    border-top: 3px solid var(--accent-gold);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--accent-gold);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--primary-green);
+    color: var(--text-muted);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .step-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .controls-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .community-stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

@@ -1,0 +1,647 @@
+/* FrontWars - Responsive Design */
+
+/* Mobile First Approach */
+
+/* Extra Small Devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+    :root {
+        --section-padding: 40px 0;
+        --container-padding: 0 15px;
+    }
+    
+    /* Navigation */
+    .nav-container {
+        padding: 0 15px;
+        height: 60px;
+    }
+    
+    .nav-logo h1 {
+        font-size: 1.4rem;
+    }
+    
+    .nav-subtitle {
+        font-size: 0.6rem;
+    }
+    
+    /* Hero Section */
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+    
+    /* Section Headers */
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    /* Game Title Section Responsive - Simplified */
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    /* Game Title Section - Simplified */
+    
+    /* Game Section */
+    .game-frame {
+        height: 400px;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .game-info .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .game-info .btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Guide Steps */
+    .step-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .step-number {
+        font-size: 2.5rem;
+        min-width: 60px;
+    }
+    
+    .step-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Controls Grid */
+    .controls-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .control-category {
+        padding: 20px;
+    }
+    
+    .control-category h3 {
+        font-size: 1.1rem;
+    }
+    
+    .key {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    
+    /* Community Stats */
+    .community-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .stat-icon {
+        font-size: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    /* About Page */
+    .about-hero {
+        min-height: 40vh;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .feature-detail {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+    
+    .feature-detail .feature-icon {
+        font-size: 3rem;
+        min-width: 60px;
+    }
+    
+    .feature-detail .feature-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .feature-detail .feature-text p {
+        font-size: 1rem;
+    }
+    
+    .why-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .why-item {
+        padding: 20px;
+    }
+    
+    .why-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .faq-item {
+        padding: 20px;
+    }
+    
+    .faq-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+    }
+    
+    /* Contact Page */
+    .contact-hero {
+        min-height: 40vh;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .military-form {
+        padding: 25px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .info-section {
+        padding: 20px;
+    }
+    
+    .info-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .info-icon {
+        font-size: 1.2rem;
+    }
+    
+    .info-content h4 {
+        font-size: 0.9rem;
+    }
+    
+    .protocol-item {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+    
+    .support-list li {
+        font-size: 0.9rem;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .social-links {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .social-link {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .social-icon {
+        font-size: 2rem;
+    }
+    
+    .social-info h4 {
+        font-size: 1rem;
+    }
+    
+    .social-info p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .controls-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .community-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-stats {
+        gap: 40px;
+    }
+    
+    /* Game Section */
+    .game-frame {
+        height: 500px;
+    }
+    
+    .game-info {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 25px;
+    }
+    
+    .game-info .hero-buttons {
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+    .game-info .btn {
+        width: auto;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .controls-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .community-stats {
+        flex-direction: row;
+        gap: 40px;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .why-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .social-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    /* Game Section */
+    .game-frame {
+        height: 600px;
+    }
+    
+    .game-info {
+        padding: 25px 30px;
+    }
+    
+    .game-info .btn {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .controls-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .why-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .faq-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .social-links {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    /* Game Section */
+    .game-frame {
+        height: 700px;
+    }
+    
+    .game-info {
+        padding: 30px 40px;
+    }
+    
+    .game-info .btn {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .controls-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .why-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .faq-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .social-links {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Navigation Toggle for Mobile */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--primary-green);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 20px 0;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 15px 25px;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .military-nav,
+    .nav-toggle,
+    .hero-buttons,
+    .btn,
+    .military-footer {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .hero-section,
+    .game-section,
+    .features-section,
+    .guide-section,
+    .controls-section,
+    .community-section {
+        page-break-inside: avoid;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: black;
+    }
+    
+    .section-header h2 {
+        color: black;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .tactical-grid {
+        background-size: 25px 25px;
+    }
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero-section {
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-stats {
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    /* Already optimized for dark theme */
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .tactical-grid {
+        animation: none;
+    }
+    
+    .titleGlow {
+        animation: none;
+    }
+    
+    .statusBlink {
+        animation: none;
+    }
+    
+    * {
+        transition: none;
+    }
+}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontWars - Ultimate Multiplayer Strategy Game | Real-Time Battle Royale</title>
+    <meta name="description" content="Play FrontWars, the fast-paced multiplayer strategy game where dozens of players fight for global domination. Real-time battles, alliances, and nuclear warfare await!">
+    <meta name="keywords" content="FrontWars, multiplayer strategy game, real-time strategy, battle royale, nuclear warfare, alliances, strategy game">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="FrontWars - Ultimate Multiplayer Strategy Game">
+    <meta property="og:description" content="Join the battle for global domination in FrontWars. Forge alliances, command armies, and unleash nuclear strikes in this intense multiplayer strategy game.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://frontwars.xyz">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0Z0XZBBNY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J0Z0XZBBNY');
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1893638941587898"
+         crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="military-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>FRONTWARS</h1>
+                <span class="nav-subtitle">STRATEGIC COMMAND</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#game-embed" class="nav-link">HOME</a></li>
+                <li><a href="#features" class="nav-link">FEATURES</a></li>
+                <li><a href="#how-to-play" class="nav-link">GUIDE</a></li>
+                <li><a href="#controls" class="nav-link">CONTROLS</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Game Title Section -->
+    <div style="
+        text-align: center; 
+        padding: 30px 0; 
+        margin: 20px 0; 
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        width: 100%;
+        display: block;
+        overflow: visible;
+    ">
+        <h1 style="
+            font-size: 3rem; 
+            color: #D4AF37; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            margin: 0; 
+            padding: 20px;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 1); 
+            font-family: 'Orbitron', sans-serif;
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: visible;
+            width: 100%;
+            box-sizing: border-box;
+        ">FRONTWARS</h1>
+    </div>
+
+    <!-- Game Embed Section - Moved to front -->
+    <section id="game-embed" class="game-section">
+        <div class="game-container">
+            <div class="game-frame" id="gameFrame">
+                <!-- Play Button Overlay -->
+                <div class="play-overlay" id="playOverlay">
+                    <div class="play-content">
+                        <h2>FRONTWARS</h2>
+                        <p>ULTIMATE MULTIPLAYER STRATEGY WARFARE</p>
+                        <button class="play-button" id="playButton">PLAY NOW</button>
+                    </div>
+                </div>
+                <!-- Game iframe (hidden initially) -->
+                <iframe 
+                    id="gameIframe"
+                    src="https://frontwars.io/" 
+                    width="100%" 
+                    height="700"
+                    frameborder="0"
+                    allowfullscreen
+                    title="FrontWars Game"
+                    style="display: none;">
+                </iframe>
+            </div>
+            <div class="game-info">
+                <h3>BATTLE STATUS</h3>
+                <div class="status-indicators">
+                    <div class="status-item online">
+                        <span class="status-dot"></span>
+                        <span>ONLINE</span>
+                    </div>
+                    <div class="status-item players">
+                        <span class="status-dot"></span>
+                        <span>ACTIVE PLAYERS</span>
+                    </div>
+                </div>
+                <div class="fullscreen-controls">
+                    <button class="fullscreen-button" id="fullscreenButton">
+                        <span class="fullscreen-icon">⛶</span>
+                        FULLSCREEN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background">
+            <div class="tactical-grid"></div>
+            <div class="military-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">COMMAND YOUR EMPIRE</h1>
+                <h2 class="hero-subtitle">ULTIMATE MULTIPLAYER STRATEGY WARFARE</h2>
+                <p class="hero-description">
+                    Join hundreds of players in the ultimate battle for global domination. 
+                    Forge alliances, command armies, and unleash nuclear strikes in this 
+                    intense real-time strategy game.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">72%</span>
+                        <span class="stat-label">TERRITORY TO WIN</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">PLAYERS PER BATTLE</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">GLOBAL WARFARE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2>STRATEGIC CAPABILITIES</h2>
+            <p>Master the art of warfare with advanced tactical systems</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚔️</div>
+                <h3>REAL-TIME COMBAT</h3>
+                <p>Engage in fast-paced battles where every second counts. Make split-second decisions while managing multiple aspects of your empire.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>ALLIANCE SYSTEM</h3>
+                <p>Form strategic alliances to share resources and troops. But beware - betrayal has consequences that affect future gameplay.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">☢️</div>
+                <h3>NUCLEAR WARFARE</h3>
+                <p>Deploy devastating weapons including Atom Bombs, Hydrogen Bombs, and the powerful MIRV system to reshape the battlefield.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏗️</div>
+                <h3>STRATEGIC BUILDING</h3>
+                <p>Construct cities, defense posts, and ports to expand your empire and control key strategic locations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>RESOURCE MANAGEMENT</h3>
+                <p>Balance gold, troops, and population to build a sustainable economy and maintain your military might.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌊</div>
+                <h3>NAVAL COMBAT</h3>
+                <p>Command warships and control sea routes. Naval dominance is key to controlling global trade and supply lines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Play Section -->
+    <section id="how-to-play" class="guide-section">
+        <div class="section-header">
+            <h2>TACTICAL BRIEFING</h2>
+            <p>Master the fundamentals of strategic warfare</p>
+        </div>
+        <div class="guide-content">
+            <div class="guide-steps">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>ESTABLISH BASE</h3>
+                        <p>Begin with a small base and limited resources. Your immediate goal is to expand your territory by conquering neighboring regions.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>BUILD YOUR EMPIRE</h3>
+                        <p>Construct cities to increase population capacity, defense posts to protect borders, and ports to enable naval warfare and trade.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>FORM ALLIANCES</h3>
+                        <p>Build trust with other players to share resources and coordinate attacks. But remember - alliances can be broken for strategic advantage.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>ACHIEVE DOMINATION</h3>
+                        <p>Control 72% of the map to claim victory. Use every tactical advantage - from nuclear strikes to economic warfare.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Controls Section -->
+    <section id="controls" class="controls-section">
+        <div class="section-header">
+            <h2>COMMAND PROTOCOLS</h2>
+            <p>Master the control systems for maximum tactical efficiency</p>
+        </div>
+        <div class="controls-grid">
+            <div class="control-category">
+                <h3>MOVEMENT & NAVIGATION</h3>
+                <div class="control-list">
+                    <div class="control-item">
+                        <span class="key">WASD</span>
+                        <span class="action">Move camera</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">Q / E</span>
+                        <span class="action">Zoom in/out</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">C</span>
+                        <span class="action">Center camera on player</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">SPACE</span>
+                        <span class="action">Alternate view (terrain/countries)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="control-category">
+                <h3>COMBAT & ACTIONS</h3>
+                <div class="control-list">
+                    <div class="control-item">
+                        <span class="key">SHIFT + LMB</span>
+                        <span class="action">Attack</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">CMD + LMB</span>
+                        <span class="action">Open build menu</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">\ + LMB</span>
+                        <span class="action">Open emote menu</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">MMB</span>
+                        <span class="action">Auto-upgrade nearest building</span>
+                    </div>
+                </div>
+            </div>
+            <div class="control-category">
+                <h3>STRATEGIC COMMANDS</h3>
+                <div class="control-list">
+                    <div class="control-item">
+                        <span class="key">1 / 2</span>
+                        <span class="action">Decrease/increase attack ratio</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">SHIFT + WHEEL</span>
+                        <span class="action">Fine-tune attack ratios</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">\ + R</span>
+                        <span class="action">Reset graphics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community-section">
+        <div class="section-header">
+            <h2>JOIN THE WAR EFFORT</h2>
+            <p>Connect with fellow commanders and share strategies</p>
+        </div>
+        <div class="community-stats">
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-info">
+                    <span class="stat-number">10,000+</span>
+                    <span class="stat-label">ACTIVE COMMANDERS</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-info">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">DAILY BATTLES</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🌍</div>
+                <div class="stat-info">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">COUNTRIES</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="military-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FRONTWARS</h3>
+                <p>Ultimate multiplayer strategy warfare</p>
+            </div>
+            <div class="footer-section">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="#game-embed">Home</a></li>
+                    <li><a href="#game-embed">Play Now</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>GAME INFO</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-to-play">How to Play</a></li>
+                    <li><a href="#controls">Controls</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>COMMUNITY</h4>
+                <ul>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#">Leaderboard</a></li>
+                    <li><a href="#">Tournaments</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FrontWars. All rights reserved. | Developed by VexxusArts</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script>
+        // Game controls functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const playButton = document.getElementById('playButton');
+            const playOverlay = document.getElementById('playOverlay');
+            const gameIframe = document.getElementById('gameIframe');
+            const fullscreenButton = document.getElementById('fullscreenButton');
+            const gameFrame = document.getElementById('gameFrame');
+
+            // Play button functionality
+            playButton.addEventListener('click', function() {
+                playOverlay.style.display = 'none';
+                gameIframe.style.display = 'block';
+            });
+
+            // Fullscreen functionality
+            fullscreenButton.addEventListener('click', function() {
+                if (gameFrame.requestFullscreen) {
+                    gameFrame.requestFullscreen();
+                } else if (gameFrame.webkitRequestFullscreen) {
+                    gameFrame.webkitRequestFullscreen();
+                } else if (gameFrame.msRequestFullscreen) {
+                    gameFrame.msRequestFullscreen();
+                }
+            });
+
+            // Exit fullscreen on ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
