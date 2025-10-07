@@ -96,17 +96,20 @@ h3 {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-direction: row;
 }
 
 .nav-logo-icon {
     width: 40px;
     height: 40px;
     flex-shrink: 0;
+    order: 1;
 }
 
 .nav-logo-text {
     display: flex;
     flex-direction: column;
+    order: 2;
 }
 
 .nav-logo-text h1 {
@@ -879,6 +882,10 @@ section {
     
     .nav-toggle {
         display: flex;
+    }
+    
+    .nav-logo {
+        gap: 8px;
     }
     
     .nav-logo-icon {
