@@ -19,9 +19,9 @@
     <link rel="apple-touch-icon" href="favicon-shield.svg">
     
     <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/main.css?v=2.0">
+    <link rel="stylesheet" href="assets/css/components.css?v=2.0">
+    <link rel="stylesheet" href="assets/css/responsive.css?v=2.0">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -413,9 +413,39 @@
 
             // Play button functionality
             playButton.addEventListener('click', function() {
+                console.log('Play button clicked'); // Debug log
                 playOverlay.style.display = 'none';
                 gameIframe.style.display = 'block';
                 gameFrame.classList.add('game-active');
+                
+                // Force CSS update - remove all blur and overlay effects
+                gameFrame.style.background = 'transparent';
+                gameFrame.style.backgroundImage = 'none';
+                gameFrame.style.opacity = '1';
+                gameFrame.style.backdropFilter = 'none';
+                gameFrame.style.webkitBackdropFilter = 'none';
+                gameFrame.style.filter = 'none';
+                
+                // Force remove pseudo-elements by adding a style tag
+                const style = document.createElement('style');
+                style.textContent = `
+                    .game-frame.game-active {
+                        background: transparent !important;
+                        background-image: none !important;
+                        opacity: 1 !important;
+                        backdrop-filter: none !important;
+                        -webkit-backdrop-filter: none !important;
+                        filter: none !important;
+                    }
+                    .game-frame.game-active::after {
+                        display: none !important;
+                        opacity: 0 !important;
+                        visibility: hidden !important;
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                console.log('Game frame activated'); // Debug log
             });
 
             // Embed button functionality
